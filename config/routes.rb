@@ -1,4 +1,14 @@
 Rails.application.routes.draw do
+  get 'users/new'
+
+  get 'users/index'
+
+  get 'users/show'
+
+  root to: 'static_pages#home'
+  match '/about', to: 'static_pages#about', via:'get' 
+  match '/feedback', to: 'static_pages#feedback', via:'get'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
