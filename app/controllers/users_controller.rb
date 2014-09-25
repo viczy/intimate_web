@@ -8,16 +8,32 @@ class UsersController < ApplicationController
 
   def show
   	@user = User.find(params[:id])
+    respond_to do |format|
+      format.html 
+      format.json { render :json => { id: @user.id, name: @user.name, email: @user.email, token:@user.remember_token }.to_json }
+    end
   end
 
   def create
     @user = User.new(user_params)
-    if @user.save
-      sign_in @user
-      flash[:success] = "Welcome to the Sample App!"
-      redirect_to @user
-    else
-      render 'new'
+    respond_to do |format|
+      format.html {
+        if @user.save
+          sign_in @user
+          flash[:success] = "Welcome to the Sample App!"
+          redirect_to @user
+        else
+          render 'new'
+        end
+      }
+
+      format.json { 
+        if @user.save
+          render json: @user, status: :created
+        else
+          render json: @user.errors, status: :unprocessable_entity
+        end
+      }
     end
   end
 
