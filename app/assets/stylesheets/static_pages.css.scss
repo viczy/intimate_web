@@ -1,6 +1,6 @@
-/*intimate home page*/
+/*intimate origin*/
 
-.intimate_background {
+.intimate_origin {
     position: absolute;
     top: 0;
     left: 0;
@@ -49,4 +49,35 @@ a.btn-outline-inverse:hover, a.btn-outline-inverse:focus, a.btn-outline-inverse:
   transition: ease background-color 0.4s;
   text-decoration: none;
   color:#20B8E8;
+}
+
+/*guide block*/
+
+.intimate_origin .guide-block {
+    position: absolute;
+    top: 50%;
+    margin-top: -125px;
+}
+
+.intimate_origin h1, .intimate_origin h2 {
+    color: #fff;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+    text-align: center;
+}
+.intimate_origin h1 {
+    font-size: 50px;
+    line-height: 60px;
+}
+.intimate_origin .guide-block h1 {
+    letter-spacing: -2px;
+}
+
+.intimate_origin h2 {
+    font-style: italic;
+    font-weight: 500;
+    margin: 0 auto 40px;
+}
+.intimate_origin .container {
+    position: relative;
+    height: 100%;
 }

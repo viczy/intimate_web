@@ -9,4 +9,9 @@ class StaticPagesController < ApplicationController
 
   def feedback
   end
+
+  def calendar
+
+  end
+  
 end

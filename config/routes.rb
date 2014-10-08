@@ -6,14 +6,15 @@ Rails.application.routes.draw do
   get 'users/show'
 
   root to: 'static_pages#home'
-  match '/about',          to: 'static_pages#about',            via:'get' 
-  match '/feedback',       to: 'static_pages#feedback',         via:'get'
+  match '/about',          to: 'static_pages#about',            via: 'get' 
+  match '/feedback',       to: 'static_pages#feedback',         via: 'get'
+  match '/calendar',       to: 'static_pages#calendar',         via: 'get'
   match '/signup',         to: 'users#new',                     via: 'get'
-  match '/signin',         to: 'sessions#new',                  via:'get'
-  match '/signout',        to: 'sessions#destroy',              via:'get'
+  match '/signin',         to: 'sessions#new',                  via: 'get'
+  match '/signout',        to: 'sessions#destroy',              via: 'get'
 
   #api
-  match 'sessions',        to: 'sessions#create',               via:'post'
+  match 'sessions',        to: 'sessions#create',               via: 'post'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
