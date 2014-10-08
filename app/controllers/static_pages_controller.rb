@@ -11,7 +11,7 @@ class StaticPagesController < ApplicationController
   end
 
   def calendar
-
+  	render :layout => false
   end
   
 end
