@@ -81,39 +81,6 @@ p {
   }
 }
 
-/** 
-* Outline inverse Button 
-*/
-a.btn-outline-inverse {
-  color: #fff;
-  background-color: transparent;
-  border-color: #fff;
-}
-a.btn-outline-inverse:hover, a.btn-outline-inverse:focus, a.btn-outline-inverse:active {
-  color: #333;
-  background-color: #fff;
-  border-color: #fff;
-}
-
-.login-attractive,
-.signup-attractive{
-  border-width: 2px;
-  font-weight: 400;
-  text-transform: uppercase;
-  color:white;
-  border-radius: 50px;
-  padding: 10px 22px;
-  background-color: rgba(255,255,255,.25) !important;
-  font-size: 18px;
-}
-.login-attractive:hover,
-.signup-attractive:hover {
-  background-color: #fff !important;
-  transition: ease background-color 0.4s;
-  text-decoration: none;
-  color:#34495E;
-}
-
 /* footer */
 
 footer {
@@ -244,21 +211,3 @@ input {
   }
 }
 
-/*intimate home page*/
-
-.intimate_background {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    overflow: hidden;
-    max-height: 100%;
-    background-image: image-url("intimate.png");
-    background-size: cover;
-    -moz-background-size: cover;
-    -webkit-background-size: cover;
-    -o-background-size: cover;
-    -ms-background-size: cover;
-    background-position: center;
-}
