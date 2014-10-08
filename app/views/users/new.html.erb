@@ -1,31 +1,40 @@
-<% provide(:title, '注册') %>
-<h1>注册</h1>
-
-<div class="container">
-    <%= form_for(@user) do |f| %>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Intimate</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <section class="grey system">
+    <div class="block">
+      <%= link_to "intimate", root_path, id:"logo" %>
+      <h2></h2>
+      <%= form_for(@user) do |f| %>
 
       <div class="form-group">
-        <%= f.label :email, "邮箱" %>
-        <%= f.text_field :email, class: 'form-control' %>
+        <%= f.text_field :email,  placeholder: '邮箱', class: 'form-control' %>
       </div>
     
       <div class="form-group">
-        <%= f.label :name, "昵称" %>
-        <%= f.text_field :name, class: 'form-control' %>
+        <%= f.text_field :name, placeholder: '昵称', class: 'form-control' %>
       </div>
       
        <div class="form-group">
-        <%= f.label :password, "密码" %>
-        <%= f.password_field :password, class: 'form-control' %>
+        <%= f.password_field :password, placeholder: '密码', class: 'form-control' %>
       </div>
       
       <div class="form-group">
-        <%= f.label :password_confirmation, "确认密码" %>
-        <%= f.password_field :password_confirmation, class: 'form-control' %>
+        <%= f.password_field :password_confirmation, placeholder: '确认密码', class: 'form-control' %>
       </div>
 
       <div class = "form-group">
         <%= f.submit "注册", class: "btn btn-large btn-primary" %>
       </div>
     <% end %>
-</div>
+    </div>
+    <p class="center"><%= link_to "已经注册？请登录", signup_path %></p>
+  </section>
+</body>
+

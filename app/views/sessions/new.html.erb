@@ -1,21 +1,30 @@
-<% provide(:title, "Sign in") %>
-<h1>登录</h1>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Intimate</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <section class="grey system">
+    <div class="block">
+      <%= link_to "intimate", root_path, id:"logo" %>
+      <h2></h2>
+      <%= form_for(:session, url: sessions_path) do |f| %>
+        <div class="form-group">
+          <%= f.text_field :email, placeholder: '账号', class: 'form-control' %>
+        </div>
+        
+        <div class="form-group">
+          <%= f.password_field :password, placeholder: '密码', class: 'form-control' %>
+        </div>
 
-<div class="container">
-  <div class="span6 offset3">
-    <%= form_for(:session, url: sessions_path) do |f| %>
-
-      <%= f.label :email, "邮箱" %>
-      <%= f.text_field :email %>
-
-      <%= f.label :password, "密码" %>
-      <%= f.password_field :password %>
-
-      <div class = "signupsubmit">
-        <%= f.submit "登录", class: "btn btn-large btn-primary" %>
-      </div>
-    <% end %>
-
-    <p><%= link_to "注册>>", signup_path %></p>
-  </div>
-</div>
+        <div class = "signupsubmit">
+          <%= f.submit "登录", class: "btn btn-large btn-primary" %>
+        </div>
+      <% end %>
+    </div>
+    <p class="center"><%= link_to "没有账号？请注册", signup_path %></p>
+  </section>
+</body>
