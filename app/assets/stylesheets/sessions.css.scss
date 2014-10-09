@@ -1,12 +1,6 @@
-// Place all the styles related to the Sessions controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
-
-/*section*/
-
-section.grey {
-  background-color: #ecf0f4;
-}
+/*
+**home
+*/
 
 /*system*/
 .system {
@@ -18,12 +12,12 @@ section.grey {
 }
 
 .system .block {
-  width: 430px;
-  padding: 60px 60px 40px;
-  background: #fff;
-  text-align: center;
-  margin: 40px auto 20px;
-  overflow: hidden;
+	width: 430px;
+	padding: 60px 60px 40px;
+	background: #fff;
+	text-align: center;
+	margin: 40px auto 20px;
+	overflow: hidden;
 }
 
 /*block*/
@@ -32,3 +26,4 @@ section.grey {
 	color: #20B8E8;
 	float: center;
 }
+
