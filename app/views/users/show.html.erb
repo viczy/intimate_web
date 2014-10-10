@@ -1,48 +1,67 @@
-<section>
-	<div class="tabs tabs-style-shape">
-		<nav>
-			<ul>
-				<li>
-					<a href="#section-shape-1">
-						<svg viewBox="0 0 80 60" preserveAspectRatio="none"><use xlink:href="#tabshape"></use></svg>
-						<span>Home</span>
-					</a>
-				</li>
-				<li>
-					<a href="#section-shape-2">
-						<svg viewBox="0 0 80 60" preserveAspectRatio="none"><use xlink:href="#tabshape"></use></svg>
-						<svg viewBox="0 0 80 60" preserveAspectRatio="none"><use xlink:href="#tabshape"></use></svg>
-						<span>Design</span>
-					</a>
-				</li>
-				<li>
-					<a href="#section-shape-3">
-						<svg viewBox="0 0 80 60" preserveAspectRatio="none"><use xlink:href="#tabshape"></use></svg>
-						<svg viewBox="0 0 80 60" preserveAspectRatio="none"><use xlink:href="#tabshape"></use></svg>
-						<span>Work</span>
-					</a>
-				</li>
-				<li>
-					<a href="#section-shape-4">
-						<svg viewBox="0 0 80 60" preserveAspectRatio="none"><use xlink:href="#tabshape"></use></svg>
-						<svg viewBox="0 0 80 60" preserveAspectRatio="none"><use xlink:href="#tabshape"></use></svg>
-						<span>Portfolio</span>
-					</a>
-				</li>
-				<li>
-					<a href="#section-shape-5">
-						<svg viewBox="0 0 80 60" preserveAspectRatio="none"><use xlink:href="#tabshape"></use></svg>
-						<span>Contact</span>
-					</a>
-				</li>
-			</ul>
-		</nav>
-		<div class="content-wrap">
-			<section id="section-shape-1"><p>1</p></section>
-			<section id="section-shape-2"><p>2</p></section>
-			<section id="section-shape-3"><p>3</p></section>
-			<section id="section-shape-4"><p>4</p></section>
-			<section id="section-shape-5"><p>5</p></section>
-		</div><!-- /content -->
-	</div><!-- /tabs -->
-</section>
+<% content_for :for_head do %>
+  <script src="/assets/modernizr.custom.js"></script>
+  <link rel="stylesheet" type="text/css" href="/assets/normalize.css">
+  <link rel="stylesheet" type="text/css" href="/assets/demo.css">
+  <link rel="stylesheet" type="text/css" href="/assets/tabs.css">
+  <link rel="stylesheet" type="text/css" href="/assets/tabstyles.css">
+<% end %>
+<div class="container">
+	<section>
+		<div class="tabs tabs-style-shape">
+			<nav>
+				<ul>
+					<li>
+						<a href="#section-shape-1">
+							<svg viewBox="0 0 80 60" preserveAspectRatio="none"><use xlink:href="#tabshape"></use></svg>
+							<span>Home</span>
+						</a>
+					</li>
+					<li>
+						<a href="#section-shape-2">
+							<svg viewBox="0 0 80 60" preserveAspectRatio="none"><use xlink:href="#tabshape"></use></svg>
+							<svg viewBox="0 0 80 60" preserveAspectRatio="none"><use xlink:href="#tabshape"></use></svg>
+							<span>Design</span>
+						</a>
+					</li>
+					<li>
+						<a href="#section-shape-3">
+							<svg viewBox="0 0 80 60" preserveAspectRatio="none"><use xlink:href="#tabshape"></use></svg>
+							<svg viewBox="0 0 80 60" preserveAspectRatio="none"><use xlink:href="#tabshape"></use></svg>
+							<span>Work</span>
+						</a>
+					</li>
+					<li>
+						<a href="#section-shape-4">
+							<svg viewBox="0 0 80 60" preserveAspectRatio="none"><use xlink:href="#tabshape"></use></svg>
+							<svg viewBox="0 0 80 60" preserveAspectRatio="none"><use xlink:href="#tabshape"></use></svg>
+							<span>Portfolio</span>
+						</a>
+					</li>
+					<li>
+						<a href="#section-shape-5">
+							<svg viewBox="0 0 80 60" preserveAspectRatio="none"><use xlink:href="#tabshape"></use></svg>
+							<span>Contact</span>
+						</a>
+					</li>
+				</ul>
+			</nav>
+			<div class="content-wrap">
+				<section id="section-shape-1"><p>1</p></section>
+				<section id="section-shape-2"><p>2</p></section>
+				<section id="section-shape-3"><p>3</p></section>
+				<section id="section-shape-4"><p>4</p></section>
+				<section id="section-shape-5"><p>5</p></section>
+			</div><!-- /content -->
+		</div><!-- /tabs -->
+	</section>
+	<script src="js/cbpFWTabs.js"></script>
+		<script>
+			(function() {
+
+				[].slice.call( document.querySelectorAll( '.tabs' ) ).forEach( function( el ) {
+					new CBPFWTabs( el );
+				});
+
+			})();
+	</script>
+</div>
