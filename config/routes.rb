@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   resources :users
+  resources :feedbacks
   resources :sessions, only: [:new, :create, :destroy]
   get 'users/index'
 
@@ -7,7 +8,6 @@ Rails.application.routes.draw do
 
   root to: 'static_pages#home'
   match '/about',          to: 'static_pages#about',            via: 'get' 
-  match '/feedback',       to: 'static_pages#feedback',         via: 'get'
   match '/calendar',       to: 'static_pages#calendar',         via: 'get'
   match '/signup',         to: 'users#new',                     via: 'get'
   match '/signin',         to: 'sessions#new',                  via: 'get'

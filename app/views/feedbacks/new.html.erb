@@ -1,0 +1,23 @@
+<div class="container">
+	<div class="jumbotron">
+		<div class="container block">
+			<%= form_for(@feedback) do |f| %>
+			    <div class="form-group">
+			        <%= f.text_field :email,  placeholder: '回访邮箱（可选）', class: 'form-control' %>
+			    </div>
+			    
+			    <div class="form-group">
+			        <%= f.text_field :title, placeholder: '主题', class: 'form-control' %>
+			    </div>
+			      
+			    <div class="form-group">
+			        <%= f.text_area :content, :rows => 12, :cols => 100, placeholder: '反馈内容', class: 'form-control feedback-content' %>
+			    </div>
+
+			    <h2>
+			        <%= f.submit "提交反馈", class: "btn btn-default btn-primary btn-absolute-default" %>
+			    </h2>
+		    <% end %>
+		</div>
+	</div>
+</div>

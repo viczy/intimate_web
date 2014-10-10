@@ -7,11 +7,8 @@ class StaticPagesController < ApplicationController
   def about
   end
 
-  def feedback
-  end
-
   def calendar
   	render :layout => false
   end
-  
+
 end
