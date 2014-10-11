@@ -1,10 +1,16 @@
 <% content_for :for_head do %>
-  <script src="/assets/modernizr.custom.js"></script>
-  <link rel="stylesheet" type="text/css" href="/assets/normalize.css">
-  <link rel="stylesheet" type="text/css" href="/assets/demo.css">
-  <link rel="stylesheet" type="text/css" href="/assets/tabs.css">
-  <link rel="stylesheet" type="text/css" href="/assets/tabstyles.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+  	<link rel="stylesheet" type="text/css" href="/assets/normalize.css">
+  	<link rel="stylesheet" type="text/css" href="/assets/profile_tabs.css">
+  	<link rel="stylesheet" type="text/css" href="/assets/tabs.css">
+  	<link rel="stylesheet" type="text/css" href="/assets/tabstyles.css">
+  	<script src="/assets/modernizr.custom.js"></script>
 <% end %>
+<svg class="hidden">
+	<defs>
+		<path id="tabshape" d="M80,60C34,53.5,64.417,0,0,0v60H80z"/>
+	</defs>
+</svg>
 <div class="container">
 	<section>
 		<div class="tabs tabs-style-shape">
@@ -54,7 +60,7 @@
 			</div><!-- /content -->
 		</div><!-- /tabs -->
 	</section>
-	<script src="js/cbpFWTabs.js"></script>
+	<script src="/assets/cbpFWTabs.js"></script>
 		<script>
 			(function() {
 
