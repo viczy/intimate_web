@@ -21,7 +21,7 @@ class UsersController < ApplicationController
       format.html {
         if @user.save
           sign_in @user
-          flash[:success] = "Welcome to the Sample App!"
+          flash[:success] = "Welcome to the INTIMATE!"
           redirect_to @user
         else
           render 'new'
@@ -34,6 +34,27 @@ class UsersController < ApplicationController
         else
           render json: @user.errors, status: :unprocessable_entity
         end
+      }
+    end
+  end
+
+  def update
+    respond_to do |format|
+      format.html {
+        if @user.update_attributes(user_params)
+          flash[:success] = "Profile updated"
+          redirect_to @user
+        else
+          render 'edit'
+        end
+      }
+
+      format.json { 
+        if @user.update_attributes(user_params)
+          head :no_content, status: :ok
+        else
+          render json: @user.errors, status: :unprocessable_entity
+      end
       }
     end
   end
