@@ -14,47 +14,46 @@
 
 <div class="container">
 	
-	<section>
 		<div class="avatar">
 			<h1><%= image_tag("profile.jpg", alt: "profile")%></h1>
 		</div>
-	</section>
+		<h1><%= @user.name %></h1>
+		<h1><%= link_to "个人设置", edit_user_path(current_user), class:"btn, btn-outline-inverse, login-attractive" %></h1>
 
-	<section>
 		<div class="tabs tabs-style-shape">
 			<nav>
 				<ul>
 					<li>
 						<a href="#section-shape-1">
 							<svg viewBox="0 0 80 60" preserveAspectRatio="none"><use xlink:href="#tabshape"></use></svg>
-							<span>Home</span>
+							<span>今日记账</span>
 						</a>
 					</li>
 					<li>
 						<a href="#section-shape-2">
 							<svg viewBox="0 0 80 60" preserveAspectRatio="none"><use xlink:href="#tabshape"></use></svg>
 							<svg viewBox="0 0 80 60" preserveAspectRatio="none"><use xlink:href="#tabshape"></use></svg>
-							<span>Design</span>
+							<span>我的计划</span>
 						</a>
 					</li>
 					<li>
 						<a href="#section-shape-3">
 							<svg viewBox="0 0 80 60" preserveAspectRatio="none"><use xlink:href="#tabshape"></use></svg>
 							<svg viewBox="0 0 80 60" preserveAspectRatio="none"><use xlink:href="#tabshape"></use></svg>
-							<span>Work</span>
+							<span>双方通知</span>
 						</a>
 					</li>
 					<li>
 						<a href="#section-shape-4">
 							<svg viewBox="0 0 80 60" preserveAspectRatio="none"><use xlink:href="#tabshape"></use></svg>
 							<svg viewBox="0 0 80 60" preserveAspectRatio="none"><use xlink:href="#tabshape"></use></svg>
-							<span>Portfolio</span>
+							<span>待定</span>
 						</a>
 					</li>
 					<li>
 						<a href="#section-shape-5">
 							<svg viewBox="0 0 80 60" preserveAspectRatio="none"><use xlink:href="#tabshape"></use></svg>
-							<span>Contact</span>
+							<span>待定</span>
 						</a>
 					</li>
 				</ul>
@@ -67,7 +66,7 @@
 				<section id="section-shape-5"><p>5</p></section>
 			</div><!-- /content -->
 		</div><!-- /tabs -->
-	</section>
+
 	<script src="/assets/cbpFWTabs.js"></script>
 		<script>
 			(function() {
