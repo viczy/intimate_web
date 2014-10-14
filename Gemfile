@@ -10,6 +10,7 @@ gem 'faker'
 gem 'will_paginate'
 gem 'bootstrap-will_paginate'
 gem 'grape'
+gem 'chart-js-rails'
 
 group :development, :test do
   gem 'sqlite3'
