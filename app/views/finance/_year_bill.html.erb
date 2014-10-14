@@ -35,6 +35,7 @@
 
 		}
 
+		/* http://www.jaceju.net/blog/archives/160/ ******fix the window.onload override bug***********/
 		var oldOnload = window.onload || function () {};
 		window.onload = function(){
 			oldOnload();
