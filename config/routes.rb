@@ -13,6 +13,7 @@ Rails.application.routes.draw do
   match '/signout',        to: 'sessions#destroy',              via: 'get'
 
   match '/finance',        to: 'finance#index',                 via: 'get'
+  match '/finance/detail', to: 'finance#detail',                via: 'get'
 
   #api
   match 'sessions',        to: 'sessions#create',               via: 'post'
