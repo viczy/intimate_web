@@ -16,4 +16,9 @@
 <%= render 'layouts/footer' %>
 
 </body>
+
+<% if content_for? :for_script %>
+<%= yield :for_script %>
+<% end %>
+
 </html>

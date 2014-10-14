@@ -3,25 +3,28 @@
 	<h1><canvas id="chart-pie" width="400" height="400"></canvas></h1>
 </div>
 
-<script>
-	var pieChartData = [
-	{
-		value: 15,
-		color:"#F38630"
-	},
-	{
-		value : 30,
-		color : "#E0E4CC"
-	},
-	{
-		value : 55,
-		color : "#69D2E7"
-	}			
-	]
+<% content_for :for_script do %>
+	<script>
+		var pieChartData = [
+		{
+			value: 15,
+			color:"#F38630"
+		},
+		{
+			value : 30,
+			color : "#E0E4CC"
+		},
+		{
+			value : 55,
+			color : "#69D2E7"
+		}			
+		]
 
-	window.onload = function(){
-		var ctx = document.getElementById("chart-pie").getContext("2d");
-		window.myPie = new Chart(ctx).Pie(pieChartData);
-	};
+		window.onload = function(){
+			var ctx = document.getElementById("chart-pie").getContext("2d");
+			window.myPie = new Chart(ctx).Pie(pieChartData);
+		};
 
-</script>
+	</script>
+<% end %>
+
