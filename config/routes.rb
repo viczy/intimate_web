@@ -1,17 +1,18 @@
 Rails.application.routes.draw do
+
   resources :users
   resources :feedbacks
   resources :sessions, only: [:new, :create, :destroy]
-  get 'users/index'
-
-  get 'users/show'
 
   root to: 'static_pages#home'
   match '/about',          to: 'static_pages#about',            via: 'get' 
   match '/calendar',       to: 'static_pages#calendar',         via: 'get'
+
   match '/signup',         to: 'users#new',                     via: 'get'
   match '/signin',         to: 'sessions#new',                  via: 'get'
   match '/signout',        to: 'sessions#destroy',              via: 'get'
+
+  match '/finance',        to: 'finance#index',                 via: 'get'
 
   #api
   match 'sessions',        to: 'sessions#create',               via: 'post'
