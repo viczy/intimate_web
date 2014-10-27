@@ -1,10 +1,10 @@
 <header class="navbar navbar-fixed-top navbar-inverse" role="navigation">
   <div class="navbar-inner">
     <div class="container">
-      <%= link_to "intimate", root_path, id: "logo" %>
+      <%= link_to "intimate", current_user, id: "logo" %>
       <nav>
         <ul class="nav navbar-nav pull-right">
-          <li><%= link_to "首页", root_path %></li>
+          <li><%= link_to "主页", current_user %></li>
           <li><%= link_to "关于", about_path %></li>
           <% if signed_in? %>
             <li class="dropdown">
@@ -12,8 +12,7 @@
                 账号 <b class="caret"></b>
               </a> 
               <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1"> 
-                <li role="presentation"><%= link_to "个人资料", current_user %></li>
-                <li role="presentation"><%= link_to "设置", edit_user_path(current_user) %></li>
+                <li role="presentation"><%= link_to "个人设置", edit_user_path(current_user) %></li>
                 <li role="presentation" class="divider"></li>
                 <li role="presentation">
                   <%= link_to "注销", signout_path, method: "delete" %>

@@ -20,30 +20,24 @@
 					<li><a href="#section-linebox-5"><span>周账单</span></a></li>
 					<li><a href="#section-linebox-4"><span>月账单</span></a></li>
 					<li><a href="#section-linebox-2"><span>年账单</span></a></li>
-					<li><a href="#section-linebox-3"><span>Drinks</span></a></li>
-					<li><a href="#section-linebox-5"><span>Settings</span></a></li>
 				</ul>
 			</nav>
 			<div class="content-wrap">
 				<section id="section-linebox-1"><%= render 'finance/week_bill' %></section>
 				<section id="section-linebox-2"><%= render 'finance/month_bill' %></section>
 				<section id="section-linebox-3"><%= render 'finance/year_bill' %></section>
-				<section id="section-linebox-4"><p>4</p></section>
-				<section id="section-linebox-5"><p>5</p></section>
 			</div><!-- /content -->
 		</div><!-- /tabs -->
 	</section>
 </div>
 
-<% content_for :for_script do %>
-	<script src="/assets/cbpFWTabs.js"></script>
-		<script>
-			(function() {
+<script src="/assets/cbpFWTabs.js"></script>
+	<script>
+		(function() {
 
-				[].slice.call( document.querySelectorAll( '.tabs' ) ).forEach( function( el ) {
-					new CBPFWTabs( el );
-				});
+			[].slice.call( document.querySelectorAll( '.tabs' ) ).forEach( function( el ) {
+				new CBPFWTabs( el );
+			});
 
-			})();
-	</script>
-<% end %>
+		})();
+</script>
