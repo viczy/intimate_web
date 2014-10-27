@@ -1,4 +1,4 @@
-@font-face {
+/*@font-face {
 	font-family: 'ecoico';
 	src:url('../fonts/timelineicons/ecoico.eot');
 	src:url('../fonts/timelineicons/ecoico.eot?#iefix') format('embedded-opentype'),
@@ -57,7 +57,7 @@
 
 /* Right content */
 .cbp_tmtimeline > li .cbp_tmlabel {
-	margin: 0 0 15px 25%;
+	margin: 0 300px 15px 25%;
 	background: #3594cb;
 	color: #fff;
 	padding: 2em;
