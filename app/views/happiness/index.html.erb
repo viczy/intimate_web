@@ -25,13 +25,7 @@
 		</ul>
 	</section>
 </div><!-- /container -->
-<script src="/assets/masonry.pkgd.min.js"></script>
-<script src="/assets/imagesloaded.pkgd.min.js"></script>
-<script src="/assets/classie.js"></script>
-<script src="/assets/colorfinder-1.1.js"></script>
-<script src="/assets/gridScrollFx.js"></script>
-<script>
-	new GridScrollFx( document.getElementById( 'grid' ), {
-		viewportFactor : 0.4
-	} );
-</script>
+
+<% content_for :for_script do %>
+	<script data-main="/assets/samsung_grid" src="/assets/require.js"></script>
+<% end %>
