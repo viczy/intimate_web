@@ -11,12 +11,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141010031908) do
+ActiveRecord::Schema.define(version: 20141029054801) do
 
   create_table "feedbacks", force: true do |t|
     t.string   "title"
     t.string   "content"
     t.string   "email"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "happies", force: true do |t|
+    t.string   "them"
+    t.string   "url"
+    t.date     "create"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

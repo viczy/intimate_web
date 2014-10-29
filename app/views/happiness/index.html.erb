@@ -1,0 +1,37 @@
+<% content_for :for_head do %>
+	<link rel="stylesheet" type="text/css" href="/assets/normalize.css">
+ 	<link rel="stylesheet" type="text/css" href="/assets/samsung_grid.css">
+ 	<script src="/assets/modernizr.custom.js"></script>
+<% end %>
+
+<div class="container">
+	<section class="grid-wrap">
+		<ul class="grid swipe-down" id="grid">
+			<% 13.times do %>
+        		<li><a href="#"><%= image_tag("http://i0.sinaimg.cn/ent/m/f/2008-07-11/U1358P28T3D2097154F326DT20080711112703.jpg") %><h3>海瑟薇</h3></a></li>
+        		<li><a href="#"><%= image_tag("http://gb.cri.cn/mmsource/images/2009/05/06/eb0905060012.jpg") %><h3>梅根</h3></a></li>
+    		<% end %>
+
+    		<% 13.times do %>
+        		<li><a href="#"><%= image_tag("http://www.hkcna.hk/content/2014/0827/U280P22T1D289281F1DT20140827120716.jpg") %><h3>碧昂斯</h3></a></li>
+        		<li><a href="#"><%= image_tag("http://i0.sinaimg.cn/ent/m/f/2008-07-11/U1358P28T3D2097154F326DT20080711112703.jpg") %><h3>海瑟薇</h3></a></li>
+    		<% end %>
+
+    		<% 13.times do %>
+        		<li><a href="#"><%= image_tag("http://www.hkcna.hk/content/2014/0827/U280P22T1D289281F1DT20140827120716.jpg") %><h3>碧昂斯</h3></a></li>
+        		<li><a href="#"><%= image_tag("http://gb.cri.cn/mmsource/images/2009/05/06/eb0905060012.jpg") %><h3>梅根</h3></a></li>
+    		<% end %>
+
+		</ul>
+	</section>
+</div><!-- /container -->
+<script src="/assets/masonry.pkgd.min.js"></script>
+<script src="/assets/imagesloaded.pkgd.min.js"></script>
+<script src="/assets/classie.js"></script>
+<script src="/assets/colorfinder-1.1.js"></script>
+<script src="/assets/gridScrollFx.js"></script>
+<script>
+	new GridScrollFx( document.getElementById( 'grid' ), {
+		viewportFactor : 0.4
+	} );
+</script>

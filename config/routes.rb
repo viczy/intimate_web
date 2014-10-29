@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   resources :users
   resources :feedbacks
   resources :sessions, only: [:new, :create, :destroy]
+  resources :happiness
 
   root to: 'static_pages#home'
   match '/about',          to: 'static_pages#about',            via: 'get' 
@@ -14,6 +15,8 @@ Rails.application.routes.draw do
 
   match '/finance',        to: 'finance#index',                 via: 'get'
   match '/finance/detail', to: 'finance#detail',                via: 'get'
+
+  match '/happiness',      to: 'happiness#index',               via: 'get'
 
   #api
   match 'sessions',        to: 'sessions#create',               via: 'post'
