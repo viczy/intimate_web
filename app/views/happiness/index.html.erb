@@ -1,7 +1,6 @@
 <% content_for :for_head do %>
 	<link rel="stylesheet" type="text/css" href="/assets/normalize.css">
  	<link rel="stylesheet" type="text/css" href="/assets/samsung_grid.css">
- 	<script src="/assets/modernizr.custom.js"></script>
 <% end %>
 
 <div class="container">
@@ -27,5 +26,10 @@
 </div><!-- /container -->
 
 <% content_for :for_script do %>
-	<script data-main="/assets/samsung_grid" src="/assets/require.js"></script>
+	<%= javascript_include_tag 'samsung_grid', 'data-turbolinks-track' => true %>
+	<script>
+		new GridScrollFx( document.getElementById( 'grid' ), {
+			viewportFactor : 0.4
+		} );
+	</script>
 <% end %>
