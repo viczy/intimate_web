@@ -16,7 +16,7 @@ Rails.application.routes.draw do
   match '/finance',        to: 'finance#index',                 via: 'get'
   match '/finance/detail', to: 'finance#detail',                via: 'get'
 
-  match '/happiness',      to: 'happiness#index',               via: 'get'
+  match '/times',          to: 'happiness#index',               via: 'get'
 
   #api
   match 'sessions',        to: 'sessions#create',               via: 'post'
