@@ -11,9 +11,12 @@ Rails.application.config.assets.version = '1.0'
 Rails.application.config.assets.precompile += %w( fwtabs.css )
 Rails.application.config.assets.precompile += %w( sumsung_grid.css )
 Rails.application.config.assets.precompile += %w( timeline.css )
+Rails.application.config.assets.precompile += %w( fullcalendar.min.css )
+Rails.application.config.assets.precompile += %w( fullcalendar.print.css )
 
 
 
 #js
 Rails.application.config.assets.precompile += %w( cbpFWTabs.js )
 Rails.application.config.assets.precompile += %w( sumsung_grid.js )
+Rails.application.config.assets.precompile += %w( calendar.js )

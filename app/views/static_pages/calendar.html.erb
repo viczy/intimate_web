@@ -3,11 +3,10 @@
 <head>
   <title>Intimate</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag    'fullcalendar.min', media: 'all', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag    'fullcalendar.print', media: 'print', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <link href="/assets/fullcalendar.min.css" rel="stylesheet">
-  <link href="/assets/fullcalendar.print.css" rel="stylesheet" media="print">
-  <script src="/assets/moment.min.js"></script>
-  <script src="/assets/fullcalendar.min.js"></script>
+  <%= javascript_include_tag 'calendar', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
   <script>
     $(document).ready(function() {
