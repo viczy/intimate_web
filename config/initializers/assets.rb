@@ -6,4 +6,14 @@ Rails.application.config.assets.version = '1.0'
 # Precompile additional assets.
 # application.js, application.css, and all non-JS/CSS in app/assets folder are already added.
 # Rails.application.config.assets.precompile += %w( search.js )
-Rails.application.config.assets.precompile += %w( samsung_grid.js )
+
+#css
+Rails.application.config.assets.precompile += %w( fwtabs.css )
+Rails.application.config.assets.precompile += %w( ssgrid.css )
+Rails.application.config.assets.precompile += %w( timeline.css )
+
+
+
+#js
+Rails.application.config.assets.precompile += %w( cbpFWTabs.js )
+Rails.application.config.assets.precompile += %w( ssgrid.js )

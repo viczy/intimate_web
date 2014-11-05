@@ -20,7 +20,7 @@ Rails.application.configure do
   # config.action_dispatch.rack_cache = true
 
   # Disable Rails's static asset server (Apache or nginx will already do this).
-  config.serve_static_assets = false
+  config.serve_static_assets = true
 
   # Compress JavaScripts and CSS.
   config.assets.js_compressor = :uglifier
@@ -75,4 +75,10 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
+
+
+  #add the secret key by vic
+  config.secret_key_base = 'd6d1bd08bb19507c558a481a964d4890ffb9d71da99508f9ff3d91c4bdc05f4d3795c1f31d573f743d150bde4a5185b560d00bd54b64f75daa426bab9b10a8d1'
+
+
 end

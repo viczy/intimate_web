@@ -1,9 +1,6 @@
 <% content_for :for_head do %>
+	<%= stylesheet_link_tag    'fwtabs', media: 'all', 'data-turbolinks-track' => true %>
 	<meta name="viewport" content="width=device-width, initial-scale=1"> 
-  	<link rel="stylesheet" type="text/css" href="/assets/normalize.css">
-  	<link rel="stylesheet" type="text/css" href="/assets/profile_tabs.css">
-  	<link rel="stylesheet" type="text/css" href="/assets/tabs.css">
-  	<link rel="stylesheet" type="text/css" href="/assets/tabstyles.css">
 <% end %>
 <svg class="hidden">
 	<defs>
@@ -31,7 +28,7 @@
 </div>
 
 <% content_for :for_script do %>
-	<script src="/assets/cbpFWTabs.js"></script>
+	<%= javascript_include_tag 'cbpFWTabs', 'data-turbolinks-track' => true %>
 		<script>
 			(function() {
 

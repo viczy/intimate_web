@@ -1,10 +1,6 @@
 <% content_for :for_head do %>
-	<meta name="viewport" content="width=device-width, initial-scale=1"> 
-  	<link rel="stylesheet" type="text/css" href="/assets/normalize.css">
-  	<link rel="stylesheet" type="text/css" href="/assets/profile_tabs.css">
-  	<link rel="stylesheet" type="text/css" href="/assets/tabs.css">
-  	<link rel="stylesheet" type="text/css" href="/assets/tabstyles.css">
-  	<script src="/assets/modernizr.custom.js"></script>
+	<%= stylesheet_link_tag 'fwtabs', media: 'all', 'data-turbolinks-track' => true %>
+  	<meta name="viewport" content="width=device-width, initial-scale=1"> 
 <% end %>
 <svg class="hidden">
 	<defs>
@@ -67,7 +63,7 @@
 			</div><!-- /content -->
 		</div><!-- /tabs -->
 
-	<script src="/assets/cbpFWTabs.js"></script>
+	<%= javascript_include_tag 'cbpFWTabs', 'data-turbolinks-track' => true %>
 	<script>
 		(function() {
 			[].slice.call( document.querySelectorAll( '.tabs' ) ).forEach( function( el ) {
