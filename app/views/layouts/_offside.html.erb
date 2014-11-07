@@ -1,0 +1,25 @@
+<div>
+    <ul id="navigation">
+        <li class="home"><a href="" title="Home"></a></li>
+        <li class="finance"><a href="" title="Finance"></a></li>
+        <li class="plan tab_current"><a href="" title="Plan"></a></li>
+        <li class="notice"><a href="" title="Notice"></a></li>
+        <li class="memory"><a href="" title="Memory"></a></li>
+        <li class="happiness"><a href="" title="Happiness"></a></li>
+    </ul>
+</div>
+
+<script>
+    $(function() {
+        $('#navigation a').stop().animate({'marginLeft':'-85px'},1000);
+
+        $('#navigation > li').hover(
+            function () {
+                $('a',$(this)).stop().animate({'marginLeft':'-2px'},200);
+            },
+            function () {
+                $('a',$(this)).stop().animate({'marginLeft':'-85px'},200);
+            }
+        );
+    });
+</script>

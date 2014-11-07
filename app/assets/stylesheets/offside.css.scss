@@ -1,0 +1,58 @@
+ul#navigation {
+    position: fixed;
+    margin: 0px;
+    padding: 0px;
+    top: 60px;
+    left: 0px;
+    list-style: none;
+    z-index:9999;
+}
+ul#navigation li {
+    width: 100px;
+}
+ul#navigation li a {
+    display: block;
+    margin-left: -2px;
+    width: 100px;
+    height: 70px;    
+    background-color: #bdc2c9;
+    background-repeat:no-repeat;
+    background-position:center center;
+/*    border:1px solid #bdc2c9;*/
+    -moz-border-radius:0px 10px 10px 0px;
+    -webkit-border-bottom-right-radius: 10px;
+    -webkit-border-top-right-radius: 10px;
+    -khtml-border-bottom-right-radius: 10px;
+    -khtml-border-top-right-radius: 10px;
+    /*-moz-box-shadow: 0px 4px 3px #000;
+    -webkit-box-shadow: 0px 4px 3px #000;
+    */
+    opacity: 0.8;
+    filter:progid:DXImageTransform.Microsoft.Alpha(opacity=80);
+}
+
+ul#navigation .tab_current a { 
+    background-color: #20B8E8;
+/*    border:1px solid #20B8E8;*/
+}
+
+
+/*normal*/
+ul#navigation .home a{
+    background-image: image-url("icon_profile.png");
+}
+ul#navigation .finance a      {
+    background-image: image-url("icon_finance.png");
+}
+ul#navigation .plan a      {
+    background-image: image-url("icon_plan.png");
+}
+ul#navigation .notice a      {
+    background-image: image-url("icon_notice.png");
+}
+ul#navigation .memory a   {
+    background-image: image-url("icon_memory.png");
+}
+ul#navigation .happiness a     {
+    background-image: image-url("icon_happiness.png");
+}
