@@ -1,4 +1,4 @@
-ul#navigation {
+ul#leftside {
     position: fixed;
     margin: 0px;
     padding: 0px;
@@ -7,17 +7,18 @@ ul#navigation {
     list-style: none;
     z-index:9999;
 }
-ul#navigation li {
+ul#leftside li {
     width: 100px;
 }
-ul#navigation li a {
+ul#leftside li a {
     display: block;
     margin-left: -2px;
     width: 100px;
     height: 70px;    
     background-color: #bdc2c9;
     background-repeat:no-repeat;
-    background-position:center center;
+    background-position:35% center;
+    text-decoration: none;
 /*    border:1px solid #bdc2c9;*/
     -moz-border-radius:0px 10px 10px 0px;
     -webkit-border-bottom-right-radius: 10px;
@@ -31,28 +32,38 @@ ul#navigation li a {
     filter:progid:DXImageTransform.Microsoft.Alpha(opacity=80);
 }
 
-ul#navigation .tab_current a { 
+ul#leftside .tab_current a { 
     background-color: #20B8E8;
 /*    border:1px solid #20B8E8;*/
 }
 
 
 /*normal*/
-ul#navigation .home a{
+ul#leftside .home a{
     background-image: image-url("icon_profile.png");
 }
-ul#navigation .finance a      {
+ul#leftside .finance a      {
     background-image: image-url("icon_finance.png");
 }
-ul#navigation .plan a      {
+ul#leftside .plan a      {
     background-image: image-url("icon_plan.png");
 }
-ul#navigation .notice a      {
+ul#leftside .notice a      {
     background-image: image-url("icon_notice.png");
 }
-ul#navigation .memory a   {
+ul#leftside .memory a   {
     background-image: image-url("icon_memory.png");
 }
-ul#navigation .happiness a     {
+ul#leftside .happiness a     {
     background-image: image-url("icon_happiness.png");
 }
+
+.vertical {
+    padding-left: 78%;
+    padding-top: 18%;
+    text-align:  center;
+    width: 20px;
+    line-height: 16px;
+    font-weight:bold; 
+    color: white;
+} 

@@ -1,25 +1,36 @@
 <div>
-    <ul id="navigation">
-        <li class="home"><%= link_to "个人资料", current_user %></li>
-        <li class="finance"><%= link_to "账单", finance_detail_path %></li>
-        <li class="plan tab_current"><a href="" title="Plan"></a></li>
-        <li class="notice"><a href="" title="Notice"></a></li>
-        <li class="memory"><a href="" title="Memory"></a></li>
-        <li class="happiness"><%= link_to "时光纵览", times_path %></li>
+    <ul id="leftside" class="home">
+        <li class="home">
+            <%= link_to(current_user) do %>
+                <p class="vertical">主页</p>
+            <% end %>
+        </li>
+        <li class="finance">
+            <%= link_to(finance_detail_path) do %>
+                <p class="vertical">账单</p>
+            <% end %>
+        </li>
+        <li class="plan">
+            <%= link_to(current_user) do %>
+                <p class="vertical">计划</p>
+            <% end %>
+        </li>
+        <li class="notice">
+            <%= link_to(current_user) do %>
+                <p class="vertical">通知</p>
+            <% end %>
+        </li>
+        <li class="memory">
+            <%= link_to(current_user) do %>
+                <p class="vertical">待定</p>
+            <% end %>
+        </li>
+        <li class="happiness">
+            <%= link_to(times_path) do %>
+                <p class="vertical">时光</p>
+            <% end %>
+        </li>
     </ul>
 </div>
 
-<script>
-    $(function() {
-        $('#navigation a').stop().animate({'marginLeft':'-85px'},1000);
-
-        $('#navigation > li').hover(
-            function () {
-                $('a',$(this)).stop().animate({'marginLeft':'-2px'},200);
-            },
-            function () {
-                $('a',$(this)).stop().animate({'marginLeft':'-85px'},200);
-            }
-        );
-    });
-</script>
+<%= javascript_include_tag 'leftside', 'data-turbolinks-track' => true %>
