@@ -5,9 +5,10 @@
 	var leftsideUL;
     var all;
 
-    if (window.currentIndex === undefined) {
-    	window.currentIndex = 12;
-    };
+    // if (window.currentIndex === undefined) {
+    // 	window.currentIndex = 12;
+    // };
+    
     if (!leftsideUL) {
     	leftsideUL = $('#leftside');
     };
@@ -16,10 +17,10 @@
     	all= leftsideUL.children('li');
     };
 
-    all.click(function(){
-        leftsideUL.class= 'leftside';
-        leftsideUL.addClass($(this).attr('class'));
-    });
+    // all.click(function(){
+    //     leftsideUL.class= 'leftside';
+    //     leftsideUL.addClass($(this).attr('class'));
+    // });
 
     all.hover(
         function () {
