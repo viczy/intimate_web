@@ -6,10 +6,6 @@
 				<div class="form-group">
 					<%= f.text_field :createtime,  placeholder: (Time.new).strftime("%Y-%m-%d"), readonly: true, class: 'form-control datepicker' %>	
 			    </div>
-			
-			    <div class="form-group">
-			        <%= f.text_field :createtime,  placeholder: '回访邮箱（可选）', class: 'form-control' %>
-			    </div>
 			    
 			    <div class="form-group">
 			        <%= f.text_field :spend, placeholder: '总额', class: 'form-control' %>
