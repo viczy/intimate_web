@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141113034336) do
+ActiveRecord::Schema.define(version: 20141113082159) do
 
   create_table "bills", force: true do |t|
     t.string   "createtime"
@@ -33,6 +33,28 @@ ActiveRecord::Schema.define(version: 20141113034336) do
     t.string   "them"
     t.string   "url"
     t.date     "create"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "memories", force: true do |t|
+    t.date     "memorydate"
+    t.string   "content"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "plans", force: true do |t|
+    t.string   "title"
+    t.string   "detail"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "reminds", force: true do |t|
+    t.datetime "alarm"
+    t.string   "address"
+    t.text     "content"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
