@@ -11,7 +11,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141029054801) do
+ActiveRecord::Schema.define(version: 20141113034336) do
+
+  create_table "bills", force: true do |t|
+    t.string   "createtime"
+    t.float    "spend"
+    t.text     "detail"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "feedbacks", force: true do |t|
     t.string   "title"
