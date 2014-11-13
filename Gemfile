@@ -11,6 +11,7 @@ gem 'will_paginate'
 gem 'bootstrap-will_paginate'
 gem 'grape'
 gem 'chart-js-rails'
+gem 'bootstrap-datepicker-rails'
 
 group :development, :test do
   gem 'sqlite3'

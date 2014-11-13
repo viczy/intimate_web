@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   resources :feedbacks
   resources :sessions, only: [:new, :create, :destroy]
   resources :happiness
+  resources :bills
 
   root to: 'static_pages#home'
   match '/about',          to: 'static_pages#about',            via: 'get' 
