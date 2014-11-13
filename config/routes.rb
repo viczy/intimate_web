@@ -1,5 +1,11 @@
 Rails.application.routes.draw do
 
+  get 'bills/index'
+
+  get 'bills/new'
+
+  get 'bills/destroy'
+
   resources :users
   resources :feedbacks
   resources :sessions, only: [:new, :create, :destroy]
