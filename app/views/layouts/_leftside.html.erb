@@ -11,18 +11,18 @@
             <% end %>
         </li>
         <li class="plan">
-            <%= link_to(current_user) do %>
+            <%= link_to(plans_path) do %>
                 <p class="vertical">计划</p>
             <% end %>
         </li>
         <li class="notice">
-            <%= link_to(current_user) do %>
+            <%= link_to(reminds_path) do %>
                 <p class="vertical">通知</p>
             <% end %>
         </li>
         <li class="memory">
-            <%= link_to(current_user) do %>
-                <p class="vertical">待定</p>
+            <%= link_to(memories_path) do %>
+                <p class="vertical">纪念</p>
             <% end %>
         </li>
         <li class="happiness">

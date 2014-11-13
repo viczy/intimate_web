@@ -1,0 +1,30 @@
+<div class="container">
+	<div class="jumbotron">
+		<div class="container block">
+			<%= form_for(@remind) do |f| %>
+
+				<div class="form-group">
+					<%= f.text_field :alarm,  placeholder: (Time.new).strftime("%Y-%m-%d"), readonly: true, class: 'form-control datepicker' %>	
+			    </div>
+			    
+			    <div class="form-group">
+			        <%= f.text_field :address, placeholder: '地点（可选）', class: 'form-control' %>
+			    </div>
+			      
+			    <div class="form-group">
+			        <%= f.text_area :content, :rows => 12, :cols => 100, placeholder: '具体事件', class: 'form-control feedback-content' %>
+			    </div>
+
+			    <h2>
+			        <%= f.submit "保存", class: "btn btn-default btn-primary btn-absolute-default" %>
+			    </h2>
+		    <% end %>
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript">
+	$(document).ready(function(){
+	    $('.datepicker').datepicker();
+	});
+</script>

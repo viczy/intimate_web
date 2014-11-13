@@ -1,16 +1,13 @@
 Rails.application.routes.draw do
-
-  get 'bills/index'
-
-  get 'bills/new'
-
-  get 'bills/destroy'
-
+  
   resources :users
   resources :feedbacks
   resources :sessions, only: [:new, :create, :destroy]
   resources :happiness
   resources :bills
+  resources :plans
+  resources :reminds
+  resources :memories
 
   root to: 'static_pages#home'
   match '/about',          to: 'static_pages#about',            via: 'get' 

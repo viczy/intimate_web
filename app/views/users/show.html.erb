@@ -45,7 +45,7 @@
 						<a href="#section-shape-4">
 							<svg viewBox="0 0 80 60" preserveAspectRatio="none"><use xlink:href="#tabshape"></use></svg>
 							<svg viewBox="0 0 80 60" preserveAspectRatio="none"><use xlink:href="#tabshape"></use></svg>
-							<span>待定</span>
+							<span>纪念日</span>
 						</a>
 					</li>
 					<li>
@@ -58,9 +58,9 @@
 			</nav>
 			<div class="content-wrap">
 				<section id="section-shape-1"><%= render :partial => 'finance/index', :locals => { :@bill => Bill.new} %></section>
-				<section id="section-shape-2"><p>2</p><p>2</p><p>2</p><p>2</p></section>
-				<section id="section-shape-3"><p>3</p></section>
-				<section id="section-shape-4"><p>4</p></section>
+				<section id="section-shape-2"><%= render :partial => 'plan/index', :locals => { :@bill => Plan.new} %></section>
+				<section id="section-shape-3"><%= render :partial => 'remind/index', :locals => { :@bill => Remind.new} %></section>
+				<section id="section-shape-4"><%= render :partial => 'memory/index', :locals => { :@bill => Memory.new} %></section>
 				<section id="section-shape-5"><%= render 'happiness/index' %></section>
 			</div><!-- /content -->
 		</div><!-- /tabs -->
