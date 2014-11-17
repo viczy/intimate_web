@@ -6,6 +6,10 @@ class PlansController < ApplicationController
   	@plan = Plan.new
   end
 
+  def create
+
+  end
+
   def destroy
   end
 end

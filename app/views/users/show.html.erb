@@ -61,7 +61,7 @@
 				<section id="section-shape-2"><%= render :partial => 'plans/index', :locals => { :@plan => Plan.new} %></section>
 				<section id="section-shape-3"><%= render :partial => 'reminds/index', :locals => { :@remind => Remind.new} %></section>
 				<section id="section-shape-4"><%= render :partial => 'memories/index', :locals => { :@memory => Memory.new} %></section>
-				<section id="section-shape-5"><%= render 'happiness/index' %></section>
+				<section id="section-shape-5"><%= render :partial => 'happiness/index', :locals => { :@happy => Happy.new} %></section>
 			</div><!-- /content -->
 		</div><!-- /tabs -->
 

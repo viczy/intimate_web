@@ -1,11 +1,11 @@
 class HappinessController < ApplicationController
 
 	def new
-		
+		@happy = Happy.new
 	end
 
 	def index
-		@users = Happy.paginate(page: params[:page])
+		
 	end
 
 	def create

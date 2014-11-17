@@ -1,9 +1,60 @@
 <div class="container">
 	<div class="jumbotron">
-		<div class="container">
+		<div class="container block">
+
+			<div class="form-group">
+				<div id="image-jumbotron"></div>
+		        <input class="form-control" id="happy_pic" name="plan[title]" placeholder="标题" type="file">
+			</div>
+
+			<div class="form-group">
+			    <textarea class="form-control feedback-content" cols="100" id="remind_content" name="remind[content]" placeholder="添加描述" rows="6"></textarea>
+			</div>
+
 			<h2>
-				<%= link_to "纵览详情", times_path %>
+			   <input class="btn btn-default btn-primary btn-absolute-default" name="commit" type="submit" value="保存">
 			</h2>
+
+			<%= form_for(@plan) do |f| %>
+			   <!-- save happy -->
+		    <% end %>
 		</div>
 	</div>
 </div>
+
+<script type="text/javascript">
+(function() {
+	function isSupportFileApi() {
+	    if(window.File && window.FileList && window.FileReader && window.Blob) {
+	        return true;
+	    }
+	    return false;
+	}
+
+    function imagePicked(e) {
+        e = e || window.event;
+        var files = this.files;
+        var p = document.getElementById('image-jumbotron');
+
+        for(var i = 0, f; f = files[i]; i++) {
+            var reader = new FileReader();
+            reader.onload = (function(file) {
+                return function(e) {
+                    var span = document.createElement('span');
+                    span.innerHTML = '<img id="picked_image" style="padding: 10 10px;" height="180" src="'+ this.result +'" alt="'+ file.name +'" />';
+
+                    $( "#picked_image" ).remove();
+                    p.insertBefore(span, null);
+                };
+            })(f);
+            //读取文件内容
+            reader.readAsDataURL(f);
+        }
+    }
+
+    if(isSupportFileApi()) {
+        document.getElementById('happy_pic').addEventListener('change', imagePicked, false);
+    }
+
+})();
+</script>
