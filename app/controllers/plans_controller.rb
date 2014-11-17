@@ -8,6 +8,14 @@ class PlansController < ApplicationController
   	@plan = Plan.new
   end
 
+  def show
+    @plan = Plan.find(params[:id])
+    respond_to do |format|
+      format.html 
+      format.json { render :json => { id: @plan.id, title: @plan.title, detail: @plan.detail, createtime: @plan.created_at }.to_json }
+    end
+  end
+
   def create
   	@plan = Plan.new(plan_params)
     respond_to do |format|
@@ -30,15 +38,16 @@ class PlansController < ApplicationController
     end
 
   end
-
+    
   def destroy
+
   end
 
 
 
 	private
 	    def plan_params
-	      params.require(:plan).permit(:titil, :detail)
+	      params.require(:plan).permit(:title, :detail)
 	    end
 
 end
