@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   resources :users
   resources :feedbacks
   resources :sessions, only: [:new, :create, :destroy]
-  resources :happiness
+  resources :happies
   resources :bills
   resources :plans
   resources :reminds

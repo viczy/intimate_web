@@ -1,4 +1,4 @@
-class HappinessController < ApplicationController
+class HappiesController < ApplicationController
 
 	def new
 		@happy = Happy.new
