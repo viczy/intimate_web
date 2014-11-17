@@ -29,7 +29,7 @@ ActiveRecord::Schema.define(version: 20141113082159) do
     t.datetime "updated_at"
   end
 
-  create_table "happies", force: true do |t|
+  create_table "happiess", force: true do |t|
     t.string   "them"
     t.string   "url"
     t.date     "create"

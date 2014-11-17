@@ -1,6 +1,6 @@
-class CreateHappies < ActiveRecord::Migration
+class CreateHappiess < ActiveRecord::Migration
   def change
-    create_table :happies do |t|
+    create_table :happiess do |t|
       t.string :them
       t.string :url
       t.date :create
