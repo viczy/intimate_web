@@ -1,1 +1,9 @@
 <%= render :partial => 'layouts/leftside', :locals => { :tab_index => "plan"} %>
+<!-- Bootstrap style -->
+<%= will_paginate(@plans) %>
+ 
+	<%= @plans.each do |plan| %>
+		<h1><%= plan.detail %></h1>
+	<% end %>
+<!-- will_paginate default style -->
+<%= will_paginate(@plans, :renderer => WillPaginate::ActionView::LinkRenderer) %>
