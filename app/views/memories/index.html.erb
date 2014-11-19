@@ -1,1 +1,8 @@
 <%= render :partial => 'layouts/leftside', :locals => { :tab_index => "memory"} %>
+
+<ul style="list-style-type:none">
+	<%= render @memories %>
+</ul>
+
+<!-- will_paginate default style -->
+<%= will_paginate @memories, :class=>"flickr_pagination" %>

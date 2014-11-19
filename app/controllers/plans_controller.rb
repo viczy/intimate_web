@@ -21,7 +21,6 @@ class PlansController < ApplicationController
     respond_to do |format|
       format.html {
         if @plan.save
-          flash[:success] = "Welcome to the INTIMATE!"
           redirect_to plans_path
         else
           render 'new'

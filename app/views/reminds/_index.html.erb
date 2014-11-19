@@ -4,7 +4,7 @@
 			<%= form_for(@remind) do |f| %>
 
 				<div class="form-group">
-					<%= f.text_field :alarm,  placeholder: (Time.new).strftime("%Y-%m-%d"), readonly: true, class: 'form-control datepicker' %>	
+					<%= f.text_field :alarm,  placeholder: (Time.new).strftime("%Y-%m-%d %I:%M %p"), readonly: true, class: 'form-control', 'data-date-format' => 'YYYY-MM-DD hh:mm A' %>	
 			    </div>
 			    
 			    <div class="form-group">
@@ -24,7 +24,7 @@
 </div>
 
 <script type="text/javascript">
-	$(document).ready(function(){
-	    $('.datepicker').datepicker();
-	});
+	$(function () {
+        $('#remind_alarm').datetimepicker();
+    });
 </script>
