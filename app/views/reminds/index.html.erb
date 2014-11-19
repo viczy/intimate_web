@@ -1,1 +1,8 @@
 <%= render :partial => 'layouts/leftside', :locals => { :tab_index => "notice"} %>
+
+<ul style="list-style-type:none">
+	<%= render @reminds %>
+</ul>
+
+<!-- will_paginate default style -->
+<%= will_paginate @reminds, :class=>"flickr_pagination" %>

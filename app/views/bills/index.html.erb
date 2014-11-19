@@ -1,2 +1,8 @@
-<h1>Bills#index</h1>
-<p>Find me in app/views/bills/index.html.erb</p>
+<%= render :partial => 'layouts/leftside', :locals => { :tab_index => "finance"} %>
+
+<ul style="list-style-type:none">
+	<%= render @bills %>
+</ul>
+
+<!-- will_paginate default style -->
+<%= will_paginate @bills, :class=>"flickr_pagination" %>
